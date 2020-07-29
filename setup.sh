@@ -10,7 +10,7 @@ if [ -z "$POOL_NAME" ]; then
 	read POOL_NAME
 fi
 
-if [ -z "AGENT_NAME" ]; then
+if [ -z "$AGENT_NAME" ]; then
 	echo "Enter Agent Name:"
 	read AGENT_NAME
 fi
