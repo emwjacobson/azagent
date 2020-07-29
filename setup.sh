@@ -5,11 +5,25 @@ if [ -z "$PAT" ]; then
 	read PAT
 fi
 
-echo "Enter Pool Name:"
-read POOL_NAME
+if [ -z "$POOL_NAME" ]; then
+	echo "Enter Pool Name:"
+	read POOL_NAME
+fi
 
-echo "Enter Agent Name:"
-read AGENT_NAME
+if [ -z "AGENT_NAME" ]; then
+	echo "Enter Agent Name:"
+	read AGENT_NAME
+fi
+
+
+if [ $(uname -m) = "aarch64" ]; then
+	AGENT_URL=https://vstsagentpackage.azureedge.net/agent/2.172.2/vsts-agent-linux-arm64-2.172.2.tar.gz
+elif [ $(uname -m) = "x86_64" ]; then
+	AGENT_URL=https://vstsagentpackage.azureedge.net/agent/2.172.2/vsts-agent-linux-x64-2.172.2.tar.gz
+else
+	echo "Unsupported platform $(uname -m)"
+	exit 1
+fi
 
 mkdir -p agent
 echo "Downloading Azure Linux Agent for ARM64"
