@@ -27,7 +27,7 @@ fi
 
 mkdir -p agent
 echo "Downloading Azure Linux Agent for ARM64"
-wget https://vstsagentpackage.azureedge.net/agent/2.172.2/vsts-agent-linux-arm64-2.172.2.tar.gz -O vsts-agent.tar.gz -c
+wget $AGENT_URL -O vsts-agent.tar.gz -c
 echo "Extracting agent"
 tar zxvf vsts-agent.tar.gz -C ./agent/
 echo "Removing compressed file"
