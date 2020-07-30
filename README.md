@@ -18,6 +18,8 @@ Running `setup.sh` will ask for your PAT, Organization URL, Agent Pool name, and
 The agent will be added to the agent pool with a random number added to it. 
 Eg if I made the Agent Name "MyAgent", it will appear in the pool as MyAgent-#####.
 
+The default action will run `run.sh`, an 'interactive' agent session. See [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/v2-linux?view=azure-devops#run-as-a-systemd-service) about running it as a systemd service.
+
 Running `remove.sh` will again ask for PAT (or not if environmental variable) and uninstall the agent that was previously installed.
 
 Symlinks are made in the current directory to the `run.sh` and `svc.sh` of the agent, to save some steps if you want to stop and start your agent easier.
