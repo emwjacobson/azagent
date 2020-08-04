@@ -1,4 +1,9 @@
-# Azure Agent Quickstart
+# DEPRECATED
+
+This has pretty much been obseleted because of Azure's documentation on ["Running a self-hosted agent in Docker"](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/docker). This has a couple scripts that help with creating a script that auto-downloads the agent and registers it to a pool.
+
+
+## Azure Agent Quickstart
 
 This is a quick bootstrap program for downloading, extracting, and registering an agent into an Agent pool.
 
